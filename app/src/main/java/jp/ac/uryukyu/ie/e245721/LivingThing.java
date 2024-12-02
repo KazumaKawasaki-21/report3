@@ -14,7 +14,7 @@ class LivingThing{
         dead = false;
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
-    
+
     public boolean isDead(){
         return this.dead;
     }
@@ -43,11 +43,11 @@ class LivingThing{
 
     }
 
-    public void attack(LivingThing opponet){
+    public void attack(LivingThing opponent){
         if (hitPoint>0){
         int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponet.getName(), damage);
-        opponet.wounded(damage);
+        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
+        opponent.wounded(damage);
         }
     }
 
